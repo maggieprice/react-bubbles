@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Login from "./components/Login";
 import "./styles.scss";
 import BubblePage from "./components/BubblePage";
@@ -11,12 +11,6 @@ function App() {
       <div className="App">
       <div className="header">
           <h1>Bubble App</h1>
-        <h2>
-            <Link to="/login"> Login </Link> 
-        </h2>
-        <h2>
-            <Link to="/protected"> Bubble Page </Link>
-        </h2>
         </div>
         <Switch>
         <PrivateRoute path="/colors" component={BubblePage} />
