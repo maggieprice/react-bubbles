@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 // import axios from "axios";
-// import {  useHistory } from 'react-router-dom';
+import {  useParams } from 'react-router-dom';
 import { axiosWithAuth } from "../utils/axiosWithAuth";
 const initialColor = {
   color: "",
@@ -8,7 +8,7 @@ const initialColor = {
 };
 
 const ColorList = ({ colors, updateColors, history }) => {
-  // const { id } = useParams();
+  const { id } = useParams();
   // const history = useHistory();
   console.log(colors);
   const [editing, setEditing] = useState(false);
